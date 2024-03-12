@@ -1,0 +1,58 @@
+@import "@/styles/mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+
+:root {
+  --white: rgb(235, 235, 235);
+  --black: rgb(0, 0, 0);
+  --gray-bg: rgb(18 17 17);
+  --skeleton: rgb(200, 200, 200);
+  --skeleton-dark: rgb(227, 227, 227);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  height: 100%;
+}
+
+body {
+  color: var(--black);
+  background: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+footer {
+  margin-top: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+section:not(:first-of-type) {
+  padding: 40px 0 40px;
+}
+
+section:first-of-type {
+  padding-bottom: 40px;
+}
