@@ -23,7 +23,7 @@ body {
 
 body {
   color: var(--black);
-  background: var(--white);
+  background: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@ a {
 }
 
 section:not(:first-of-type) {
-  padding: 40px 0 40px;
+  padding: 80px 0 80px;
 }
 
 section:first-of-type {
