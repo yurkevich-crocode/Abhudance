@@ -24,7 +24,6 @@ const TopProducts = () => {
               oldprice={"12000"}
             />
             <ProductCard name={"SB Dunk Low"} brand={"Nike"} price={"4500"} />
-            <ProductCard name={"SB Dunk Low"} brand={"Nike"} price={"4500"} />
           </div>
         </div>
       </Container>

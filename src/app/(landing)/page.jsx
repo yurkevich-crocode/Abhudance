@@ -1,3 +1,4 @@
+import Footer from "@/Components/Footer";
 import Header from "@/Components/Header";
 import Banner from "@/Sections/(landing)/Banner";
 import Category from "@/Sections/(landing)/Category";
@@ -14,6 +15,7 @@ export default function Home() {
         <TopProducts />
         <Banner />
       </main>
+      <Footer color={"black"} />
     </>
   );
 }
