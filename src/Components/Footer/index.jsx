@@ -15,19 +15,22 @@ const Footer = ({ color }) => {
       <div className={style["footer__top"]}>
         <Container>
           <div className={style["footer__wrapper"]}>
-            <Logo />
             <div className={style["footer__nav-wrapper"]}>
               <div className={style["footer__search-wrapper"]}>
-                <input
-                  type="text"
-                  className={style["footer__search"]}
-                  placeholder="Поиск..."
-                />
-                <Link href="#">
-                  <span className={style["footer__search-icon"]}>
-                    <img src="/icons/search.svg" alt="" />
-                  </span>
-                </Link>
+                <div className={style["footer__search-input"]}>
+                  <input
+                    type="text"
+                    className={style["footer__search"]}
+                    placeholder="Поиск..."
+                  ></input>
+                  <Link href="#">
+                    <span className={style["footer__search-icon"]}>
+                      <img src="/icons/search.svg" alt="" />
+                    </span>
+                  </Link>
+                </div>
+
+                <Logo />
               </div>
               <div className={style["footer__nav-item"]}>
                 <p className={style["footer__item-name"]}>Каталог</p>
@@ -69,9 +72,6 @@ const Footer = ({ color }) => {
                   </li>
                 </ul>
               </div>
-              <div className={style["footer__nav-item"]}>
-                <p className={style["footer__item-name"]}>Контакты</p>
-              </div>
             </div>
           </div>
         </Container>
@@ -79,9 +79,12 @@ const Footer = ({ color }) => {
 
       <div className={style["footer__bottom"]}>
         <Container>
-          <span className={style["footer__copyright"]}>
-            ©{new Date().getFullYear()}. Все права защищены.
-          </span>
+          <div className={style["footer__bottom-wrapper"]}>
+            <span className={style["footer__copyright"]}>
+              ©{new Date().getFullYear()}. Все права защищены.
+            </span>
+            <span className={style["footer__name"]}>Abhudance</span>
+          </div>
         </Container>
       </div>
     </footer>

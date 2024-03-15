@@ -1,5 +1,5 @@
-@import "@/styles/mixins.scss";
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+@import "@/mixins.scss";
 
 :root {
   --white: rgb(235, 235, 235);
@@ -50,9 +50,21 @@ a {
 }
 
 section:not(:first-of-type) {
-  padding: 80px 0 80px;
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 80px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 140px;
+  }
 }
 
 section:first-of-type {
-  padding-bottom: 40px;
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 80px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 140px;
+  }
 }

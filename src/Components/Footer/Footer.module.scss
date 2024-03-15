@@ -1,6 +1,13 @@
+@import "@/mixins.scss";
+
 .footer {
   display: flex;
   flex-direction: column;
+
+  &__name {
+    font-size: 18px;
+    font-weight: 900;
+  }
 
   &.footer--black {
     background-color: black;
@@ -18,9 +25,14 @@
   }
 
   &__nav-wrapper {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr 1fr;
+    display: flex;
+    justify-content: space-between;
     gap: 50px;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      gap: 40px;
+    }
   }
 
   &__nav-item {
@@ -30,23 +42,48 @@
   }
 
   &__item-name {
-    font-size: 24px;
     font-weight: 600;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 20px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 24px;
+    }
   }
 
   &__subitems {
-    font-size: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     list-style: none;
     border-top: 1px solid rgba(255, 255, 255, 0.247);
     padding-top: 20px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+    }
+  }
+
+  &__search-input {
+    position: relative;
   }
 
   &__search-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
-    height: max-content;
+    height: 100%;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__search-icon {
@@ -77,6 +114,8 @@
   &__subitem {
     width: max-content;
     position: relative;
+    font-size: 20px;
+
     &::before {
       position: absolute;
       content: "";
@@ -98,5 +137,11 @@
     background-color: white;
     padding: 10px 0;
     color: black;
+  }
+
+  &__bottom-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

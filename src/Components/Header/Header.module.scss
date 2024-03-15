@@ -1,3 +1,5 @@
+@import "@/mixins.scss";
+
 .header {
   z-index: 5;
   position: relative;
@@ -7,12 +9,18 @@
   background-color: rgb(255, 255, 255);
   color: black;
   font-weight: 900;
-  border-bottom: 1px solid black;
 
   &__top {
-    padding: 10px 0;
     background-color: black;
     color: white;
+
+    @include media-breakpoint-down(md) {
+      padding: 5px 0;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 10px 0;
+    }
   }
 
   &__wrapper {
@@ -23,7 +31,14 @@
 
   &__right-side {
     display: flex;
-    gap: 30px;
+
+    @include media-breakpoint-down(md) {
+      gap: 20px;
+    }
+
+    @include media-breakpoint-up(md) {
+      gap: 30px;
+    }
   }
 
   &__login-btn,

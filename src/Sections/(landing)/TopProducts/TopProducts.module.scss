@@ -1,7 +1,19 @@
+@import "@/mixins.scss";
+
 .top-products {
   &__items {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 40px;
+
+    @include media-breakpoint-between(sm, lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      gap: 20px;
+
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }

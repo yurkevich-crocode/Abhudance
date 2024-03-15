@@ -1,5 +1,20 @@
+@import "@/mixins.scss";
+
 .section-title {
-  font-size: 48px;
   font-weight: 900;
-  margin-bottom: 40px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  @include media-breakpoint-between(sm, lg) {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
 }

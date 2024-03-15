@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className={style["header"]}>
       <div className={style["header__top"]}>
-        <Container>sdasd</Container>
+        <Container>КАТАЛОГ</Container>
       </div>
       <div className={style["header__main"]}>
         <Container>

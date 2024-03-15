@@ -1,3 +1,5 @@
+@import "@/mixins.scss";
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -6,16 +8,35 @@
   position: relative;
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    @include media-breakpoint-up(lg) {
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__img-wrapper {
     width: 100%;
-    height: 800px;
+
     position: relative;
     animation: 1s infinite alternate bounce;
+
+    @include media-breakpoint-down(lg) {
+      height: 300px;
+    }
+    @include media-breakpoint-between(lg, xl) {
+      height: 400px;
+    }
+    @include media-breakpoint-between(xl, xxl) {
+      height: 600px;
+    }
+    @include media-breakpoint-up(xxl) {
+      height: 800px;
+    }
 
     img {
       width: 100%;
@@ -26,7 +47,24 @@
   }
 
   &__title {
-    font-size: 72px;
+    @include media-breakpoint-down(sm) {
+      font-size: 24px;
+    }
+    @include media-breakpoint-between(sm, lg) {
+      font-size: 32px;
+    }
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+    @include media-breakpoint-between(lg, xl) {
+      font-size: 42px;
+    }
+    @include media-breakpoint-between(xl, xxl) {
+      font-size: 56px;
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: 72px;
+    }
   }
 
   @keyframes bounce {
