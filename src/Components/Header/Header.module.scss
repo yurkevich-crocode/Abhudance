@@ -10,17 +10,27 @@
   color: black;
   font-weight: 900;
 
+  @include media-breakpoint-down(lg) {
+    padding: 10px 0;
+  }
+
   &__top {
-    background-color: black;
-    color: white;
-
-    @include media-breakpoint-down(md) {
-      padding: 5px 0;
+    @include media-breakpoint-down(lg) {
+      display: none;
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       padding: 10px 0;
+      background-color: black;
+      color: white;
     }
+  }
+
+  &__top-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 600;
   }
 
   &__wrapper {
@@ -74,6 +84,11 @@
       height: 3px;
       bottom: 5px;
       background-color: black;
+
+      @include media-breakpoint-down(md) {
+        height: 2px;
+        bottom: 8px;
+      }
     }
 
     &::after {
@@ -84,6 +99,11 @@
       width: 100%;
       height: 3px;
       background-color: black;
+
+      @include media-breakpoint-down(md) {
+        height: 2px;
+        top: 8px;
+      }
     }
   }
 

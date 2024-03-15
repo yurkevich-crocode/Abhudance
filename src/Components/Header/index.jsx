@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Container from "../Container";
 import Logo from "../Logo";
 import style from "./Header.module.scss";
@@ -6,7 +7,14 @@ const Header = () => {
   return (
     <header className={style["header"]}>
       <div className={style["header__top"]}>
-        <Container>КАТАЛОГ</Container>
+        <Container>
+          <div className={style["header__top-items"]}>
+            <Link href="#">Каталог</Link>
+            <Link href="#">О нас</Link>
+            <Link href="#">Гарантия</Link>
+            <Link href="#">Доставка</Link>
+          </div>
+        </Container>
       </div>
       <div className={style["header__main"]}>
         <Container>
